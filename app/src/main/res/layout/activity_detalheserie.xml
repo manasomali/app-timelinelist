@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    android:clipChildren="false"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+    tools:context=".activities.DetalheSerieActivity">
+
+    <ImageView
+        android:id="@+id/imageview_serie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        android:src="@drawable/poster" />
+
+    <ImageView
+        android:id="@+id/imageview_voltar_serietolista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_gravity="start"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageview_compartilhar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_share" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        style="@style/LinearLayoutDetalhesStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textview_nomeserie"
+                style="@style/DetalheTextView"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/button_delete_serie"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_delete" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/DetalheTextView"
+                android:id="@+id/textview_quanttempserie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/DetalheTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.05"
+                android:gravity="center"
+                android:text="⬤"
+                android:textColor="@color/colorRed"
+                android:textSize="10sp" />
+
+            <TextView
+                style="@style/DetalheTextView"
+                android:id="@+id/textview_statusserie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/DetalheTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.05"
+                android:gravity="center"
+                android:text="⬤"
+                android:textColor="@color/colorRed"
+                android:textSize="10sp" />
+
+            <TextView
+                style="@style/DetalheTextView"
+                android:id="@+id/textview_lancamentoserie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/DetalheTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.05"
+                android:gravity="center"
+                android:text="⬤"
+                android:textColor="@color/colorRed"
+                android:textSize="10sp" />
+
+            <TextView
+                style="@style/DetalheTextView"
+                android:id="@+id/textview_notaserie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:id="@+id/root_descricaoserie"
+                android:visibility="visible"
+                style="@style/LinearLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/DetalheTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Sinopse"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textview_descricaoserie"
+                    style="@style/DetalheTextView"
+                    android:animateLayoutChanges="true"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="fill_horizontal"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                style="@style/LinearLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioGroup
+                    android:id="@+id/radiogroup_status_serie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="5dp">
+                    <RadioButton
+                        android:id="@+id/checkbox_assistindo"
+                        style="@style/DetalheTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:buttonTint="@color/colorRed"
+                        android:layoutDirection="rtl"
+                        android:text="Assistindo"
+                        android:textSize="16sp"
+                        android:checked="true"/>
+                    <RadioButton
+                        android:id="@+id/checkbox_completa"
+                        style="@style/DetalheTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:buttonTint="@color/colorRed"
+                        android:layoutDirection="rtl"
+                        android:text="Completa"
+                        android:textSize="16sp"  />
+                    <RadioButton
+                        android:id="@+id/checkbox_emespera"
+                        style="@style/DetalheTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:buttonTint="@color/colorRed"
+                        android:layoutDirection="rtl"
+                        android:text="Em Espera"
+                        android:textSize="16sp" />
+                    <RadioButton
+                        android:id="@+id/checkbox_largada"
+                        style="@style/DetalheTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:buttonTint="@color/colorRed"
+                        android:layoutDirection="rtl"
+                        android:text="Largada"
+                        android:textSize="16sp"  />
+                    <RadioButton
+                        android:id="@+id/checkbox_pretendoassistir"
+                        style="@style/DetalheTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-5dp"
+                        android:buttonTint="@color/colorRed"
+                        android:layoutDirection="rtl"
+                        android:text="Pretendo Assistir"
+                        android:textSize="16sp" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                style="@style/LinearLayoutStyle">
+                <TextView
+                    style="@style/DetalheTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Data: "
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/edittext_dataassistido_serie"
+                    style="@style/DetalheTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.6"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+                <TextView
+                    style="@style/DetalheTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nota: "
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/edittext_nota_serie"
+                    style="@style/DetalheTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.3"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:layout_gravity="left"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/button_salvareditar_serie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_button_red"
+        android:text="Salvar"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardview_detalheposter_serie"
+        android:visibility="invisible"
+        style="@style/CardViewPoster">
+        <ImageView
+            android:id="@+id/imageview_detalheposter_serie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/poster" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardview_rating_serie"
+        android:visibility="invisible"
+        style="@style/CardViewPoster">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="40dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            style="@style/CardViewPoster">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/textview_notaselecionada_serie"
+                        style="@style/DetalheTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:padding="10dp"
+                        android:text="Nota"
+                        android:textColor="@color/colorRed"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <per.wsj.library.AndRatingBar
+                    android:id="@+id/ratingbar_nota_serie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:progressBackgroundTint="@color/colorBlack"
+                    android:secondaryProgressTint="@color/colorTransparent"
+                    android:progressTint="@color/colorRed"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="10"
+                    android:rating="5"
+                    app:bgDrawable="@drawable/ic_square"
+                    app:starDrawable="@drawable/ic_square"
+                    android:isIndicator="false"
+                    android:stepSize="1"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <TextView
+                        android:id="@+id/button_cancel_nota_serie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/DetalheTextView"
+                        android:padding="10dp"
+                        android:textSize="17dp"
+                        android:text="CANCEL"/>
+
+                    <TextView
+                        android:id="@+id/button_ok_nota_serie"
+                        style="@style/DetalheTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="OK"
+                        android:textColor="@color/colorRed"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

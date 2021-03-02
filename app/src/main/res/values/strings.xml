@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TimeLineList</string>
+    <string name="login">Login</string>
+    <string name="cadastrese">Cadastre-se</string>
+    <string name="termosDeUso">Eu li e concordo com os termos de uso</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="name">Nome</string>
+    <string name="second_name">Sobrenome</string>
+    <string name="email">E-mail</string>
+    <string name="statistics">Estatisticas</string>
+    <string name="save">SALVAR</string>
+    <string name="default_notification_channel_id">100</string>
+    <string name="facebook_app_id">1197687687300672</string> <string name="fb_login_protocol_scheme">fb1197687687300672</string>
+
+</resources>

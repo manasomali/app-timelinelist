@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorTransparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">#00000000</item>
+        <item name="android:statusBarColor">@color/colorTransparent</item>
+        <item name="logo">@drawable/nome_nigth</item>
+        <item name="tabStyle">@style/AppThemeNight.TabLayout</item>
+        <item name="cardViewStyle">@style/AppThemeNight.CardView</item>
+
+
+
+    </style>
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="Theme.AppCompat.DayNight.NoActionBar" >
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+
+    <style name="AppThemeNight.TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">@color/colorRed</item>
+        <item name="tabTextColor">@color/colorWhite</item>
+        <item name="singleLine">true</item>
+    </style>
+    <style name="AppThemeNight.CardView" parent="CardView">
+        <item name="cardBackgroundColor">@color/colorBlack</item>
+    </style>
+    <style name="CardViewPoster" parent="CardView">
+        <item name="cardBackgroundColor">@color/colorGreyDark</item>
+    </style>
+
+    <style name="CardTextView" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="LinearLayoutStyle">
+        <item name="android:background">@drawable/custom_cardview_night</item>
+    </style>
+
+    <style name="LinearLayoutDetalhesStyle">
+        <item name="android:background">@drawable/custom_view_detalhe_night</item>
+    </style>
+    <style name="LinearLayoutDetalhesStyle2">
+        <item name="android:background">@color/colorBlack</item>
+    </style>
+    <style name="DetalheTextView" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:buttonTint">@color/colorWhite</item>
+    </style>
+    <style name="EditText">
+        <item name="android:background">@drawable/custom_edittext_night</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:drawableTint">@color/colorWhite</item>
+    </style>
+    <style name="EditTextMaterial">
+        <item name="passwordToggleTint">@color/colorWhite</item>
+    </style>
+    <style name="Button">
+        <item name="android:backgroundTint">@color/colorWhite</item>
+        <item name="android:drawableTint">@color/colorBlack</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+    <style name="TextView">
+        <item name="android:drawableTint">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <style name="NavIcone">
+        <item name="android:tint">@color/colorWhite</item>
+    </style>
+    <style name="ActionButton">
+        <item name="android:backgroundTint">@color/colorWhite</item>
+        <item name="android:tint">@color/colorBlack</item>
+    </style>
+    <style name="EditTextBusca">
+        <item name="android:background">@drawable/custom_edittext_night</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:drawableTint">@color/colorWhite</item>
+
+    </style>
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorRed</item>
+    </style>
+    <style name="SecondaryText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+</resources>

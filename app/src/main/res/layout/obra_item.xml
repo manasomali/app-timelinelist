@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="20dp"
+    android:background="@color/colorBlack"
+    android:layout_height="200dp"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageview_backdropobra"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="-1dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_img_card" />
+
+    <TextView
+        android:id="@+id/textview_nomeobra"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="50dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorTransparent"
+        android:background="@color/colorTransparent"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textview_dateobra"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:layout_gravity="bottom"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/textview_notaobra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:maxLines="1"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textview_generoobra"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom"
+        android:textSize="16dp"
+        android:textColor="@color/colorWhite"/>
+</androidx.cardview.widget.CardView>

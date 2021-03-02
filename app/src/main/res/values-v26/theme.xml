@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorBlack</item>
+        <item name="colorPrimaryDark">@color/colorTransparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="android:navigationBarColor">@color/colorTransparent</item>
+        <item name="android:statusBarColor">@color/colorTransparent</item>
+        <item name="logo">@drawable/nome_day</item>
+        <item name="tabStyle">@style/AppThemeDay.TabLayout</item>
+        <item name="cardViewStyle">@style/AppThemeDay.CardView</item>
+        <item name="android:autofilledHighlight">@color/colorTransparent</item>
+
+
+    </style>
+</resources>

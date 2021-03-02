@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorTransparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorFundoEscuro</item>
+        <item name="android:navigationBarColor">#00000000</item>
+        <item name="android:statusBarColor">@color/colorTransparent</item>
+        <item name="logo">@drawable/nome_nigth</item>
+        <item name="tabStyle">@style/AppThemeNight.TabLayout</item>
+        <item name="cardViewStyle">@style/AppThemeNight.CardView</item>
+        <item name="android:autofilledHighlight">@color/colorTransparent</item>
+
+
+    </style>
+</resources>
